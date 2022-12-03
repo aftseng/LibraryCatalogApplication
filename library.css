@@ -1,0 +1,15 @@
+body
+{
+    color: #666666;
+    background-color: #EAEAEA;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main
+{
+    padding: 1px 20px 20px 30px;
+    display: block;
+    background-color: #FFFFFF;
+    overflow: auto;
+}
+
