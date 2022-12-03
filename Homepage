@@ -9,14 +9,16 @@
     </head>
 
     <body>
-        <li><h1>Welcome to CSE412 Group 20 Library Catalog</h1></li>
-        <li><h2>Sign in here to get started</h2></li>
-        <label for="Username">Username:</label>
-        <input type="text" id="Username" username="Username" placeholder="Username">
-        <br><br>
-        <label for="Password">Password:</label>
-        <input type="password" id="Password" name="Password" placeholder="Password">
-        <br><br>
-        <li><button>Click here to login</button></li>
+        <form action="connect.php" method="post">
+            <li><h1>Welcome to CSE412 Group 20 Library Catalog</h1></li>
+            <li><h2>Sign in here to get started</h2></li>
+            <label for="Username">Username:</label>
+            <input type="text" id="Username" username="Username" placeholder="Username">
+            <br><br>
+            <label for="Password">Password:</label>
+            <input type="password" id="Password" name="Password" placeholder="Password">
+            <br><br>
+            <li><button>Click here to login</button></li>
+        </form>
     </body>
 </html>
