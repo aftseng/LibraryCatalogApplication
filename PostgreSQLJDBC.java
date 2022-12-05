@@ -10,7 +10,7 @@ import javafx.collections.ObservableList;
 public class PostgreSQLJDBC 
 {
 	
-	static boolean result = true;
+	static boolean result = false;
 	public static ArrayList<Book> list = new ArrayList<Book>();
 	//private final static ObservableList<Book> list = FXCollections.observableArrayList();
 	
@@ -42,7 +42,8 @@ public class PostgreSQLJDBC
 			//String sql = "INSERT INTO Book (AUTHOR, TITLE, RESERVATIONSTATUS, ISBN, GENRE, PUBLISHERID)" + "VALUES ('Jane Austen', 'Pride and Prejudice', 'Reserved', '9781435172487', 'Domestic Fiction', '789');";
 			//String sql = "INSERT INTO USERS (FIRST_NAME, LAST_NAME, USERID, EMAIL, PHONE_NUMBER)" + "VALUES ('Andrew', 'Tseng', 'aft', 'aft@gmail.com', '222-222-2222');";
 			//String sql = "INSERT INTO Publisher (NAME, PUBLISHERID, YEAR)" + "VALUES ('Tilbury House', '456', '2021');";
-			String sql = "INSERT INTO RESERVATION (RESERVE_DATE, DUE_DATE, RETURN_DATE, USERID, ISBN)" + "VALUES ('11/30/22', '12/25/22', 'NA', 'aft', '9780684171609');";
+			//String sql = "INSERT INTO RESERVATION (RESERVE_DATE, DUE_DATE, RETURN_DATE, USERID, ISBN)" + "VALUES ('11/30/22', '12/25/22', 'NA', 'aft', '9780684171609');";
+			String sql = "INSERT INTO AUTHENTICATION_SYSTEM (USERID, PASSWORD)" + "VALUES ('aft', '54321');";
 			stmt.executeUpdate(sql);
 			
 			stmt.close();
@@ -417,7 +418,7 @@ public class PostgreSQLJDBC
 			System.out.println();
 			
 			stmt = c.createStatement();
-			ResultSet rs = stmt.executeQuery("SELECT userid, password FROM authentication_system");
+			ResultSet rs = stmt.executeQuery("SELECT * FROM authentication_system");
 			while(rs.next())
 			{
 				String uid = rs.getString("userid");
