@@ -20,13 +20,21 @@ public class Portal extends StackPane
 			@Override
 			public void handle(ActionEvent event) 
 			{
-				if(login.getUsername().equals("") && login.getPassword().equals(""))
+				if(login.userText.getText().equals("") && login.passText.getText().equals(""))
 				{
 					login.noInputs();
 				}
-				else if(login.getUsername() != "" && login.getPassword() != "")
+				else if(login.userText.getText().equals(""))
 				{
-					demo.selectFromAuthenticateQuery(login.getUsername(), login.getPassword());
+					login.noUsername();
+				}
+				else if(login.passText.getText().equals(""))
+				{
+					login.noPassword();
+				}
+				else if(login.userText.getText() != "" && login.passText.getText() != "")
+				{
+					demo.selectFromAuthenticateQuery(login.userText.getText(), login.passText.getText());
 					if(PostgreSQLJDBC.result == true)
 					{
 						mainScreen = new SearchScreen();
