@@ -46,6 +46,7 @@ public class SearchScreen extends Screen
     private TextField searchText = new TextField();
   	private TextArea passText = new TextArea();
 	public Button searchButton = new Button("Search");
+	public Button backButton = new Button("Back");
 	    //public Button newAcc = new Button("Create Account");
 	private Label errorText = new Label("\n");
 	//private Label confirmText = new Label("\nIT FUCKING WORKED IDIOT");
@@ -70,10 +71,11 @@ public class SearchScreen extends Screen
         centerLogin.setConstraints(search, 0, 0);
         centerLogin.setConstraints(searchText, 0, 1);
         centerLogin.setConstraints(searchButton, 1, 1);
+        centerLogin.setConstraints(backButton, 2, 1);
         //centerLogin.setConstraints(passText, 2, 0);
         //centerLogin.setConstraints(passPrompt, 0, 1);
         //centerLogin.setConstraints(passText, 1, 1);
-        centerLogin.getChildren().addAll(search, searchText, searchButton);
+        centerLogin.getChildren().addAll(search, searchText, searchButton, backButton);
         
         
         
@@ -148,6 +150,30 @@ public class SearchScreen extends Screen
         		{
         			passText.setText(demo.selectFromReservationQuery(content));
         		}
+			}
+        });
+        
+        backButton.setOnAction(new EventHandler<ActionEvent>() 
+        {
+        	@Override
+			public void handle(ActionEvent event) 
+			{
+        		if(bookButton.isSelected()) 
+				{
+        			passText.setText(demo.selectBookQuery());
+        			searchText.setText("");
+				}
+        		else if(publisherButton.isSelected()) 
+        		{
+        			passText.setText(demo.selectPublisherQuery());
+        			searchText.setText("");
+        		}
+        		else if(reserveButton.isSelected())
+        		{
+        			passText.setText(demo.selectReservationQuery());
+        			searchText.setText("");
+        		}
+        		
 			}
         });
              
