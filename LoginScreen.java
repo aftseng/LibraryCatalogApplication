@@ -28,8 +28,8 @@ public class LoginScreen extends Screen
 	private Label userPrompt = new Label("Username: ");
     private Label passPrompt = new Label("Password: ");
     private Label loginText = new Label("Log-in");
-    private TextField userText = new TextField();
-    private PasswordField passText = new PasswordField();
+    public TextField userText = new TextField();
+    public PasswordField passText = new PasswordField();
     public Button confirm = new Button("Log in");
     //public Button newAcc = new Button("Create Account");
     private int userSelect = 0;
@@ -142,7 +142,17 @@ public class LoginScreen extends Screen
     
     public void noInputs()
     {
-    	errorText.setText("\nPlease enter username and/or password");
+    	errorText.setText("\nPlease enter username and password");
+    }
+    
+    public void noPassword()
+    {
+    	errorText.setText("\nPlease enter password");
+    }
+    
+    public void noUsername()
+    {
+    	errorText.setText("\nPlease enter username");
     }
     
     public void wrongPass()
