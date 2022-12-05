@@ -1,1 +1,1 @@
-# CSE412Project
+# Library Catalog Application
