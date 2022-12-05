@@ -52,58 +52,6 @@ public class LoginScreen extends Screen
         centerLogin.setConstraints(passText, 1, 1);
         centerLogin.getChildren().addAll(userPrompt, userText, passPrompt, passText);
         
-        //organize the side to select user type
-        /*VBox rightUserType = new VBox();
-        rightUserType.setSpacing(10);
-        rightUserType.setAlignment(Pos.CENTER_LEFT);
-        ToggleGroup radio1 = new ToggleGroup();
-        Label userType = new Label("User Type:");
-        
-        //make the radio buttons for user type
-        RadioButton patientButton = new RadioButton("Patient");
-        RadioButton nurseButton = new RadioButton("Nurse");
-        RadioButton doctorButton = new RadioButton("Doctor");
-        patientButton.setToggleGroup(radio1);
-        nurseButton.setToggleGroup(radio1);
-        doctorButton.setToggleGroup(radio1);
-        //add children to VBox
-        rightUserType.getChildren().addAll(userType, patientButton, nurseButton, doctorButton);
-        patientButton.setOnAction(new EventHandler<ActionEvent>() 
-        {
-
-			@Override
-			public void handle(ActionEvent event) 
-			{
-				if(patientButton.isSelected()) 
-				{
-					userSelect = 1;
-				}
-			}
-        });
-        nurseButton.setOnAction(new EventHandler<ActionEvent>() 
-        {
-
-			@Override
-			public void handle(ActionEvent event) 
-			{
-				if(nurseButton.isSelected()) 
-				{
-					userSelect = 2;
-				}
-			}
-        });
-        doctorButton.setOnAction(new EventHandler<ActionEvent>() 
-        {
-
-			@Override
-			public void handle(ActionEvent event) 
-			{
-				if(doctorButton.isSelected()) 
-				{
-					userSelect = 3;
-				}
-			}
-        });*/
         
         HBox lowerButtons = new HBox();
         lowerButtons.setAlignment(Pos.CENTER);
