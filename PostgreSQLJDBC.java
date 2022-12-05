@@ -217,7 +217,7 @@ public class PostgreSQLJDBC
 				String year = rs.getString("year");
 				if(name.equalsIgnoreCase(t) || pid.equalsIgnoreCase(t) || year.equalsIgnoreCase(t))
 				{
-					text += "Author: " + name + "\nPublisherID: " + pid + "\nYear: " + year + "\n---------------------------------\n";
+					text += "Publisher Name: " + name + "\nPublisherID: " + pid + "\nYear: " + year + "\n---------------------------------\n";
 				}
 			}
 			rs.close();
@@ -255,7 +255,7 @@ public class PostgreSQLJDBC
 				String name = rs.getString("name");
 				String pid = rs.getString("publisherid");
 				String year = rs.getString("year");
-				result += "Author: " + name + "\nPublisherID: " + pid + "\nYear: " + year + "\n---------------------------------\n";
+				result += "Publisher Name: " + name + "\nPublisherID: " + pid + "\nYear: " + year + "\n---------------------------------\n";
 				/*System.out.println("Author: " + name);
 				System.out.println("Last Name: " + pid);
 				System.out.println("PublisherID: " + year); 
